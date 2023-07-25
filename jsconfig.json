@@ -2,7 +2,8 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./*"],
-      "@/components/*": ["components/*"]
+      "@/components/*": ["components/*"],
+      "@/icons/*": ["components/data-display/icons/*"]
     }
   }
 }
