@@ -3,6 +3,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import TopBar from "@/components/layout/top-bar";
 import NavBar from "@/components/layout/nav-bar";
+import MenuBar from "@/components/layout/menu-bar";
 
 export default function Home() {
   const [isPromotionalBannerShown, setIsPromotionalBannerShown] =
@@ -30,6 +31,9 @@ export default function Home() {
       </div>
       <div className=" flex items-center justify-center">
         <NavBar />
+      </div>
+      <div className="hidden items-center justify-center border-b border-t shadow-sm lg:flex">
+        <MenuBar />
       </div>
     </div>
   );
