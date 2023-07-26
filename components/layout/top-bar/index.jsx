@@ -22,7 +22,7 @@ function TopBar() {
     <div className="container flex items-center justify-between py-2">
       <div className="flex gap-6">
         <p>Become A seller</p>
-        <p>Free Express Shipping</p>
+        <p className="hidden lg:block">Free Express Shipping</p>
       </div>
       <div>
         <ul className="flex items-center gap-6">
