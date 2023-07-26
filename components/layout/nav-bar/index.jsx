@@ -15,10 +15,10 @@ function NavBar() {
 
   return (
     <>
-      <div className="container py-4 flex items-center justify-between">
+      <div className="container flex items-center justify-between py-6">
         <div className="flex items-center gap-5">
           <button
-            className="lg:hidden text-3xl"
+            className="text-3xl lg:hidden"
             onClick={() => setIsMobileMenuOpen(true)}
           >
             <HamBurgerIcon />
@@ -27,13 +27,13 @@ function NavBar() {
         </div>
 
         <SearchBar />
-        <div className="text-3xl flex items-center gap-5">
+        <div className="flex items-center gap-5 text-3xl">
           <div className="flex items-center gap-5">
             <MoonIcon />
             <AccountIcon />
           </div>
-          <div className="hidden lg:block h-[30px] border"></div>
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden h-[30px] border lg:block"></div>
+          <div className="hidden items-center gap-4 lg:flex">
             <Indicator itemCount={10}>
               <HeartIcon />
             </Indicator>
