@@ -2,6 +2,7 @@ import TopPromotionalBanner from "@/components/data-display/banner/top-promtiona
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import TopBar from "@/components/layout/top-bar";
+import NavBar from "@/components/layout/nav-bar";
 
 export default function Home() {
   const [isPromotionalBannerShown, setIsPromotionalBannerShown] =
@@ -24,7 +25,12 @@ export default function Home() {
           </motion.div>
         )}
       </AnimatePresence>
-      <TopBar />
+      <div className=" flex items-center justify-center bg-primary-900 text-white">
+        <TopBar />
+      </div>
+      <div className=" flex items-center justify-center">
+        <NavBar />
+      </div>
     </div>
   );
 }

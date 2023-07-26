@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 function TopPromotionalBanner({ promotionalText, onClick }) {
   return (
-    <article className="flex items-center px-8 py-3 bg-slate-100">
+    <article className="container flex items-center  py-3">
       <button onClick={onClick}>
         <CrossIcon />
       </button>

@@ -1,6 +1,5 @@
 import ChevronDown from "@/components/data-display/icons/chevron-down";
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import DropDown from "@/components/navigation/drop-down";
 
 function TopBar() {
@@ -20,7 +19,7 @@ function TopBar() {
   };
 
   return (
-    <div className="bg-blue-700 text-white flex items-center justify-between py-2 px-[120px]">
+    <div className="container flex items-center justify-between py-2">
       <div className="flex gap-6">
         <p>Become A seller</p>
         <p>Free Express Shipping</p>
