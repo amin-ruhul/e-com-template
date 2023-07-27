@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 function MegaDropDown({ dropDownData }) {
   return (
-    <section className="min-w-[25rem] columns-2 space-y-5 rounded-b-md border bg-white p-4">
+    <section className="z-50 min-w-[25rem] columns-2 space-y-5 rounded-b-md border bg-white p-4">
       {dropDownData.map((dropDown) => (
         <div key={dropDown.slug}>
           <Link href={`/${dropDown.slug}`}>
