@@ -28,7 +28,7 @@ function SideMenu({ categoryList }) {
   return (
     <div>
       {!!categoryList?.length && (
-        <ul className="rounded-md border border-secondary text-sm font-light">
+        <ul className="rounded-b-md border border-secondary text-sm font-light">
           {categoryList.map((category) => (
             <motion.li
               key={category.slug}

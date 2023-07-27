@@ -32,7 +32,7 @@ function Layout({ children }) {
           <MenuBar />
         </div>
       </header>
-      <div className="min-h-[100vh]">{children}</div>
+      <div className="min-h-[100vh] bg-secondary">{children}</div>
     </main>
   );
 }

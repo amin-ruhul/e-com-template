@@ -6,9 +6,9 @@ export default function Home() {
   const { data: categoryList } = useFetchCategories();
 
   return (
-    <div className="flex min-h-[50vh] justify-center bg-secondary">
+    <div className="flex min-h-[50vh] justify-center">
       <div className="container grid lg:grid-cols-4">
-        <div className="hidden bg-white lg:block">
+        <div className="hidden rounded-b-md bg-white lg:block">
           <SideMenu categoryList={categoryList} />
         </div>
         <div className="col-span-2">Slider</div>
