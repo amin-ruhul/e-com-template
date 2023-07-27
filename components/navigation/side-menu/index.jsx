@@ -3,7 +3,7 @@ import ChevronRight from "@/components/data-display/icons/chevron-right";
 import { motion } from "framer-motion";
 import SubMenu from "./sub-menu";
 
-function SideMenu() {
+function SideMenu({ categoryList }) {
   const animateVariation = {
     initial: {
       x: 350,
@@ -27,33 +27,34 @@ function SideMenu() {
 
   return (
     <div>
-      <ul className=" text-sm font-light">
-        <motion.li
-          initial="initial"
-          animate="initial"
-          exit="exit"
-          whileHover="animate"
-          className="relative cursor-pointer border px-3"
-        >
-          <div className="flex items-center justify-between border-b border-secondary py-5">
-            <p>Camera Accessories</p>
-            <ChevronRight />
-          </div>
+      {!!categoryList?.length && (
+        <ul className="rounded-md border border-secondary text-sm font-light">
+          {categoryList.map((category) => (
+            <motion.li
+              key={category.slug}
+              initial="initial"
+              animate="initial"
+              exit="exit"
+              whileHover="animate"
+              className="relative cursor-pointer px-3"
+            >
+              <div className="flex items-center justify-between border-b border-secondary py-5">
+                <p>{category.name}</p>
+                {!!category.childes?.length && <ChevronRight />}
+              </div>
 
-          <motion.div
-            className="absolute top-0 z-50 bg-white shadow-sm"
-            variants={animateVariation}
-          >
-            <SubMenu />
-          </motion.div>
-        </motion.li>
-        <li className="px-3 py-5">
-          <p>Camera Accessories</p>
-        </li>
-        <li className="px-3 py-5">
-          <p>Camera Accessories</p>
-        </li>
-      </ul>
+              {!!category.childes?.length && (
+                <motion.div
+                  className="absolute top-0 z-50 bg-white shadow-sm"
+                  variants={animateVariation}
+                >
+                  <SubMenu subCategoryList={category.childes} />
+                </motion.div>
+              )}
+            </motion.li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

@@ -1,7 +1,9 @@
+/* eslint-disable no-undef */
 import axios from "axios";
 
 const apiClient = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_BASE_MOCK_URL,
+  //baseURL: process.env.NEXT_PUBLIC_API_BASE_MOCK_URL,
+  baseURL: "https://6valley.sixamtech.com/react/api",
 
   timeout: 20000,
 });
