@@ -19,7 +19,7 @@ function TopBar() {
   };
 
   return (
-    <div className="container flex items-center justify-between py-2">
+    <div className="container flex items-center justify-between py-2 text-sm lg:text-base">
       <div className="flex items-center gap-6">
         <p className="rounded-full bg-primary-400 px-3 py-1 text-white">
           Become A seller
