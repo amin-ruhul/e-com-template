@@ -53,7 +53,7 @@ function MenuBar() {
             <ChevronDown />
           </div>
 
-          <motion.div className="absolute" variants={animateVariation}>
+          <motion.div className="absolute z-50" variants={animateVariation}>
             <MegaDropDown
               dropDownData={storeList.slice(0, MAX_STORE_TO_SHOW)}
             />
@@ -72,7 +72,7 @@ function MenuBar() {
             <ChevronDown />
           </div>
 
-          <motion.div className="absolute" variants={animateVariation}>
+          <motion.div className="absolute z-50" variants={animateVariation}>
             <MegaDropDown
               dropDownData={storeList.slice(0, MAX_STORE_TO_SHOW)}
             />
@@ -91,7 +91,7 @@ function MenuBar() {
             <ChevronDown />
           </div>
 
-          <motion.div className="absolute" variants={animateVariation}>
+          <motion.div className="absolute z-50" variants={animateVariation}>
             <MegaDropDown
               dropDownData={storeList.slice(0, MAX_STORE_TO_SHOW)}
             />
