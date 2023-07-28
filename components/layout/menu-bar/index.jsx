@@ -31,14 +31,16 @@ function MenuBar() {
   };
 
   return (
-    <div className="container flex items-center">
-      <button className="flex items-center gap-4 bg-primary-400 px-8 py-5 font-medium text-white">
-        <HamBurgerIcon />
-        Browse Category
+    <div className="container grid grid-cols-4 items-center gap-3">
+      <button className="jsu flex items-center justify-between bg-primary-400 px-8 py-5 font-medium text-white">
+        <div className="flex items-center gap-4">
+          <HamBurgerIcon />
+          Browse Category
+        </div>
         <ChevronDown />
       </button>
 
-      <ul className="flex items-center font-light">
+      <ul className="col-span-2 flex items-center font-light">
         <li className="cursor-pointer px-6 py-5 hover:bg-secondary">Home</li>
 
         <motion.li
@@ -102,6 +104,7 @@ function MenuBar() {
           Discount Product
         </li>
       </ul>
+      <div></div>
     </div>
   );
 }

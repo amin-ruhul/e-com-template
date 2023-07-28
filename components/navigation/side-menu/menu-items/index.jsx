@@ -1,4 +1,4 @@
-import React from "react";
+import ChevronRight from "@/components/data-display/icons/chevron-right";
 
 function MenuItems({ menuList }) {
   return (
