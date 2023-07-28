@@ -43,7 +43,7 @@ function MobileNav({ onClick }) {
             fill
             sizes="640"
             priority
-            objectFit="contain"
+            className="object-contain"
           />
         </div>
         <button className="text-xl" onClick={onClick}>

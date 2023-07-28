@@ -7,15 +7,23 @@ import { useState } from "react";
 function SearchBar() {
   const [isSearchCategoryOpen, setIsSearchCategoryOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("All Catagories");
+  const [searchKey, setSearchKey] = useState("");
 
   const handleCategoryChange = (data) => {
     setSelectedCategory(data);
     setIsSearchCategoryOpen(false);
   };
 
+  const handleSearch = (searchEvent) => {
+    searchEvent.preventDefault();
+    console.log(searchKey);
+
+    /** TODO: Implement search api */
+  };
+
   return (
     <form
-      action=""
+      onSubmit={handleSearch}
       className="hidden h-[50px] items-center gap-4 rounded-full border border-secondary py-1 pl-3 pr-1 lg:flex"
     >
       <div className="relative cursor-pointer">
@@ -42,6 +50,8 @@ function SearchBar() {
       </div>
       <input
         type="text"
+        value={searchKey}
+        onChange={(e) => setSearchKey(e.target.value)}
         placeholder="Search items or store"
         className="h-full min-w-[25rem] outline-0 placeholder:font-light"
       />

@@ -30,7 +30,7 @@ function NavBar() {
               fill
               sizes="640"
               priority
-              objectFit="contain"
+              className="object-contain"
             />
           </div>
         </div>
@@ -38,8 +38,12 @@ function NavBar() {
         <SearchBar />
         <div className="flex items-center gap-5 text-2xl text-gray-400 lg:text-3xl">
           <div className="flex items-center gap-5">
-            <MoonIcon />
-            <AccountIcon />
+            <div className="cursor-pointer">
+              <MoonIcon />
+            </div>
+            <div className="cursor-pointer">
+              <AccountIcon />
+            </div>
           </div>
           <div className="hidden h-[1.875rem] border lg:block"></div>
           <div className="hidden items-center gap-4 lg:flex">
