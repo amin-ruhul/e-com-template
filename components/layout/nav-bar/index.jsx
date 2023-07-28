@@ -15,7 +15,7 @@ function NavBar() {
 
   return (
     <>
-      <div className="container flex items-center justify-between py-6">
+      <div className="container flex items-center justify-between py-4 lg:py-6">
         <div className="flex items-center gap-5">
           <button
             className="text-3xl lg:hidden"
@@ -23,11 +23,20 @@ function NavBar() {
           >
             <HamBurgerIcon />
           </button>
-          <Image src="/assets/logo.png" alt="logo" width={146} height={45} />
+          <div className="relative h-[2.3rem] w-[6.25rem] shrink-0 lg:h-[2.875rem] lg:w-[9.125rem]">
+            <Image
+              src="/assets/logo.png"
+              alt="logo"
+              fill
+              sizes="640"
+              priority
+              objectFit="contain"
+            />
+          </div>
         </div>
 
         <SearchBar />
-        <div className="flex items-center gap-5 text-3xl">
+        <div className="flex items-center gap-5 text-2xl lg:text-3xl">
           <div className="flex items-center gap-5">
             <MoonIcon />
             <AccountIcon />
