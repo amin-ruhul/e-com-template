@@ -1,6 +1,6 @@
 ## Getting Started
 
-Create an `.env.local` file in the root of the project and paste the `.env.example` file variable in it.
+Create an `.env.local` file in the root of the project and paste the `.env.example` file's variable in it.
 
 Run the development server:
 
