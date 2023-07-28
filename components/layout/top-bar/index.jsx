@@ -54,14 +54,16 @@ function TopBar() {
               <ChevronDown />
             </button>
 
-            <DropDown
-              dropDownData={[
-                { id: 1, value: "English" },
-                { id: 2, value: "Bangla" },
-              ]}
-              isModalOpen={languageToggle}
-              handleItemChange={(data) => handleLanguageChange(data)}
-            />
+            <div className="absolute -left-0 top-0 md:-left-[5.5rem] lg:-left-[8.5rem]">
+              <DropDown
+                dropDownData={[
+                  { id: 1, value: "English" },
+                  { id: 2, value: "Bangla" },
+                ]}
+                isModalOpen={languageToggle}
+                handleItemChange={(data) => handleLanguageChange(data)}
+              />
+            </div>
           </li>
         </ul>
       </div>

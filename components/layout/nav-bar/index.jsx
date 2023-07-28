@@ -23,7 +23,7 @@ function NavBar() {
           >
             <HamBurgerIcon />
           </button>
-          <div className="relative h-[2.3rem] w-[6.25rem] shrink-0 lg:h-[2.875rem] lg:w-[9.125rem]">
+          <div className="relative h-[2.1rem] w-[6.25rem] shrink-0 lg:h-[2.875rem] lg:w-[9.125rem]">
             <Image
               src="/assets/logo.png"
               alt="logo"
@@ -36,20 +36,22 @@ function NavBar() {
         </div>
 
         <SearchBar />
-        <div className="flex items-center gap-5 text-2xl lg:text-3xl">
+        <div className="flex items-center gap-5 text-2xl text-gray-400 lg:text-3xl">
           <div className="flex items-center gap-5">
             <MoonIcon />
             <AccountIcon />
           </div>
-          <div className="hidden h-[30px] border lg:block"></div>
+          <div className="hidden h-[1.875rem] border lg:block"></div>
           <div className="hidden items-center gap-4 lg:flex">
             <Indicator itemCount={10}>
               <HeartIcon />
             </Indicator>
 
-            <div className="h-[30px]  border"></div>
+            <div className="h-[1.875rem]  border"></div>
             <Indicator itemCount={5}>
-              <BagIcon />
+              <div className="mt-1 h-[2.25rem] text-2xl">
+                <BagIcon />
+              </div>
             </Indicator>
           </div>
         </div>

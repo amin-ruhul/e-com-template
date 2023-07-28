@@ -6,16 +6,26 @@ function DropDown({ dropDownData, isModalOpen, handleItemChange }) {
     <AnimatePresence>
       {isModalOpen && (
         <motion.div
-          className=" bg-white absolute  text-black shadow-md border rounded z-50 min-w-[200px]"
-          initial={{ top: 20, opacity: 0 }}
-          animate={{ top: 30, opacity: 1 }}
-          exit={{ top: 20, opacity: 0 }}
+          variants={{
+            open: {
+              top: 30,
+              opacity: 1,
+            },
+            close: {
+              top: 20,
+              opacity: 0,
+            },
+          }}
+          className="absolute z-50  rounded border bg-white text-black shadow-md md:min-w-[8.5rem] xl:min-w-[12.5rem]"
+          initial="close"
+          animate="open"
+          exit="close"
         >
-          <ul className="px-2">
+          <ul className="px-3">
             {dropDownData.map((item) => (
               <div key={item.id}>
                 <li
-                  className="py-3 cursor-pointer"
+                  className="cursor-pointer py-3"
                   onClick={() => handleItemChange(item.value)}
                 >
                   <p>{item.value}</p>
