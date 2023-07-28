@@ -6,7 +6,7 @@ import SubMenu from "./sub-menu";
 function SideMenu({ categoryList }) {
   const animateVariation = {
     initial: {
-      x: 350,
+      x: 340,
       opacity: 0,
       transition: {
         duration: 0.3,
@@ -17,7 +17,7 @@ function SideMenu({ categoryList }) {
     },
     animate: {
       display: "block",
-      x: 371,
+      x: 361,
       opacity: 1,
       transition: {
         duration: 0.3,
@@ -45,7 +45,7 @@ function SideMenu({ categoryList }) {
 
               {!!category.childes?.length && (
                 <motion.div
-                  className="absolute top-0 z-50 bg-white shadow-sm"
+                  className="absolute top-0 z-50 rounded-md bg-white shadow-sm"
                   variants={animateVariation}
                 >
                   <SubMenu subCategoryList={category.childes} />

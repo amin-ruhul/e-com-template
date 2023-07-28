@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 function SubMenu({ subCategoryList }) {
   const animateVariation = {
     initial: {
-      x: 280,
+      x: 270,
       opacity: 0,
       transition: {
         duration: 0.3,
@@ -17,7 +17,7 @@ function SubMenu({ subCategoryList }) {
     },
     animate: {
       display: "block",
-      x: 290,
+      x: 288,
       opacity: 1,
       transition: {
         duration: 0.3,
@@ -26,7 +26,7 @@ function SubMenu({ subCategoryList }) {
   };
 
   return (
-    <ul className=" rounded-md border">
+    <ul className="rounded-md border">
       {subCategoryList.map((subCategory) => (
         <motion.li
           className="relative w-[300px] cursor-pointer px-3"
@@ -43,7 +43,7 @@ function SubMenu({ subCategoryList }) {
 
           {!!subCategory.childes?.length && (
             <motion.div
-              className="absolute top-0 z-50 bg-white shadow-sm"
+              className="absolute top-0 z-50 rounded-md bg-white shadow-sm"
               variants={animateVariation}
             >
               <MenuItems menuList={subCategory.childes} />
