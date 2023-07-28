@@ -1,4 +1,5 @@
-import { A11y, Autoplay, EffectFade, Pagination } from "swiper";
+import { A11y, Autoplay, Pagination } from "swiper";
+import { IMAGE_BASE_URL } from "@/utils/constant";
 
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -6,6 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
+import Link from "next/link";
 
 function Carousel({ bannerList }) {
   const pagination = {
@@ -19,25 +21,26 @@ function Carousel({ bannerList }) {
     <Swiper
       slidesPerView={1}
       spaceBetween={10}
-      effect={"fade"}
       loop={true}
       pagination={pagination}
       autoplay={{
-        delay: 2000,
+        delay: 3000,
       }}
-      modules={[Pagination, Autoplay, A11y, EffectFade]}
-      className="rounded-[0.5rem] md:rounded-[0.875rem]"
+      modules={[Pagination, Autoplay, A11y]}
+      className="rounded"
     >
       {bannerList.map((bannerData) => (
         <SwiperSlide key={bannerData.id}>
-          <Image
-            src={bannerData.banner}
-            width={620 * 2}
-            height={310 * 2}
-            priority
-            alt="slider image"
-            className="rounded"
-          />
+          <Link href={bannerData.url}>
+            <Image
+              src={`${IMAGE_BASE_URL}/${bannerData.photo}`}
+              width={1240}
+              height={620}
+              priority
+              alt="slider image"
+              className="rounded"
+            />
+          </Link>
         </SwiperSlide>
       ))}
     </Swiper>
