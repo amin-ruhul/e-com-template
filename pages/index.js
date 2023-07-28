@@ -1,17 +1,19 @@
 import Carousel from "@/components/data-display/carousel";
+import CategoryLoading from "@/components/feedback/category-loading";
 import SideMenu from "@/components/navigation/side-menu";
 import { useFetchCategories } from "@/repo/categories";
 import Image from "next/image";
 import { bannerData } from "@/utils/data/banner";
 
 export default function Home() {
-  const { data: categoryList } = useFetchCategories();
+  const { isLoading, data: categoryList } = useFetchCategories();
 
   return (
-    <div className="flex min-h-[50vh] justify-center">
-      <div className="container grid grid-cols-1 gap-2 lg:grid-cols-4">
+    <div className="flex  justify-center">
+      <div className="container grid lg:grid-cols-4">
         <div className="hidden rounded-b-md bg-white lg:block">
-          <SideMenu categoryList={categoryList} />
+          {isLoading && <CategoryLoading />}
+          {categoryList && <SideMenu categoryList={categoryList} />}
         </div>
         <div className="w-full space-y-5 pt-3 lg:col-span-2">
           <Carousel bannerList={bannerData} />

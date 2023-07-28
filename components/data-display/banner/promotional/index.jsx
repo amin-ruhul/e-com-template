@@ -25,7 +25,7 @@ function TopPromotionalBanner({ promotionalText, onClick }) {
         <button onClick={onClick} className="text-primary">
           <CrossIcon />
         </button>
-        <div className="flex-1 text-center text-sm text-primary">
+        <div className="flex-1 text-center text-[0.6rem] text-primary lg:text-sm">
           {promotionalText}
         </div>
       </div>

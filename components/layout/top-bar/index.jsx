@@ -19,7 +19,7 @@ function TopBar() {
   };
 
   return (
-    <div className="container flex items-center justify-between py-2">
+    <div className="container flex items-center justify-between py-2 text-sm lg:text-base">
       <div className="flex items-center gap-6">
         <p className="rounded-full bg-primary-400 px-3 py-1 text-white">
           Become A seller
@@ -54,14 +54,16 @@ function TopBar() {
               <ChevronDown />
             </button>
 
-            <DropDown
-              dropDownData={[
-                { id: 1, value: "English" },
-                { id: 2, value: "Bangla" },
-              ]}
-              isModalOpen={languageToggle}
-              handleItemChange={(data) => handleLanguageChange(data)}
-            />
+            <div className="absolute -left-0 top-0 md:-left-[5.5rem] lg:-left-[8.5rem]">
+              <DropDown
+                dropDownData={[
+                  { id: 1, value: "English" },
+                  { id: 2, value: "Bangla" },
+                ]}
+                isModalOpen={languageToggle}
+                handleItemChange={(data) => handleLanguageChange(data)}
+              />
+            </div>
           </li>
         </ul>
       </div>

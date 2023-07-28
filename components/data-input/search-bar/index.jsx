@@ -16,25 +16,25 @@ function SearchBar() {
   return (
     <form
       action=""
-      className="hidden lg:flex items-center border border-secondary gap-4 h-[50px] rounded-full pl-3 pr-1 py-1"
+      className="hidden h-[50px] items-center gap-4 rounded-full border border-secondary py-1 pl-3 pr-1 lg:flex"
     >
-      <div className="cursor-pointer relative">
+      <div className="relative cursor-pointer">
         <div
           className="flex items-center space-x-2"
           onClick={() => setIsSearchCategoryOpen(!isSearchCategoryOpen)}
         >
           <HamBurgerIcon />{" "}
-          <span className=" font-light">{selectedCategory}</span>
+          <span className="min-w-[6.25rem] font-light">{selectedCategory}</span>
           <TriangleDownIcon />
         </div>
         <DropDown
           dropDownData={[
             { id: 1, value: "Category-1" },
-            { id: 1, value: "Category-1" },
-            { id: 1, value: "Category-1" },
-            { id: 1, value: "Category-1" },
-            { id: 1, value: "Category-1" },
-            { id: 1, value: "Category-1" },
+            { id: 1, value: "Category-2" },
+            { id: 1, value: "Category-3" },
+            { id: 1, value: "Category-4" },
+            { id: 1, value: "Category-5" },
+            { id: 1, value: "Category-6" },
           ]}
           isModalOpen={isSearchCategoryOpen}
           handleItemChange={(data) => handleCategoryChange(data)}
@@ -43,10 +43,10 @@ function SearchBar() {
       <input
         type="text"
         placeholder="Search items or store"
-        className="min-w-[25rem] h-full outline-0 placeholder:font-light"
+        className="h-full min-w-[25rem] outline-0 placeholder:font-light"
       />
 
-      <button className="bg-primary text-white min-w-[60px] h-full flex items-center justify-center text-lg rounded-r-full">
+      <button className="flex h-full min-w-[60px] items-center justify-center rounded-r-full bg-primary text-lg text-white">
         <SearchIcon />
       </button>
     </form>
