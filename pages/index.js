@@ -43,7 +43,6 @@ export default function Home({ mainBannerList = [], footerBannerList = [] }) {
             width={363}
             height={800}
             alt="banner"
-            sizes="33vw"
             priority
             className="rounded"
           />

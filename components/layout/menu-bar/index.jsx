@@ -40,7 +40,7 @@ function MenuBar() {
         <ChevronDown />
       </button>
 
-      <ul className="col-span-2 flex items-center font-light">
+      <ul className="col-span-2 -ml-3 flex items-center font-light">
         <li className="cursor-pointer px-6 py-5 hover:bg-secondary">Home</li>
 
         <motion.li
@@ -55,7 +55,10 @@ function MenuBar() {
             <ChevronDown />
           </div>
 
-          <motion.div className="absolute z-50" variants={animateVariation}>
+          <motion.div
+            className="absolute left-8 z-50"
+            variants={animateVariation}
+          >
             <MegaDropDown
               dropDownData={storeList.slice(0, MAX_STORE_TO_SHOW)}
             />
@@ -74,7 +77,10 @@ function MenuBar() {
             <ChevronDown />
           </div>
 
-          <motion.div className="absolute z-50" variants={animateVariation}>
+          <motion.div
+            className="absolute left-8 z-50"
+            variants={animateVariation}
+          >
             <MegaDropDown
               dropDownData={storeList.slice(0, MAX_STORE_TO_SHOW)}
             />
@@ -93,7 +99,10 @@ function MenuBar() {
             <ChevronDown />
           </div>
 
-          <motion.div className="absolute z-50" variants={animateVariation}>
+          <motion.div
+            className="absolute left-8 z-50"
+            variants={animateVariation}
+          >
             <MegaDropDown
               dropDownData={storeList.slice(0, MAX_STORE_TO_SHOW)}
             />
